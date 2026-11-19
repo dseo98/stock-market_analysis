@@ -14,3 +14,12 @@ I was surprised that interest rates and the S&P 500 had a positive correlation b
 
 # Analysing using monthly S&P 500 Returns
 After calculating monthly S&P 500 returns, I noticed that the correlation results were very different from the previous analysis. GDP had almost no correlation with monthly S&P 500 returns with 0.003, even though it had a very strong positive correlation with the S&P 500 index (0.968). This showed me that the relationship between economic indicators and the stock market can look very different depending on how stock performance is measured.
+
+
+# Analysis using lagged economic indicators
+I also checked the relationship between the previous month's economic indicators and the current month's S&P 500 returns. I used shift(1) to create lagged variables for CPI, unemployment, interest rates and GDP.
+
+The correlations were all close to zero. GDP had the lowest correlation with 0.001, while unemployment had the highest with 0.151. I thought the results might be different when using the previous month's data, but there was not much change. 
+
+So far I haven't found a strong relationship between these economic indicators and monthly S&P 500 returns.
+
