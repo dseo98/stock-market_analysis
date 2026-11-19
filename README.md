@@ -23,3 +23,13 @@ The correlations were all close to zero. GDP had the lowest correlation with 0.0
 
 So far I haven't found a strong relationship between these economic indicators and monthly S&P 500 returns.
 
+
+# Model evaluation
+I used Linear Regression to predict monthly S&P 500 returns based on the previous month's economic indicators.
+
+The model had an MAE of 2.96 and an R-squared value of -0.214. I also compared it with a baseline model that always predicted the average return from the training data. The baseline model had a lower MAE of 2.85.
+
+This shows that the Linear Regression model didn't perform better than the baseline model. I also noticed that the model had difficulty predicting months with large market changes, especially in 2022. For example, the actual return in May 2022 was -7.99%, but the model predicted 2.40%.
+
+Overall, the economic indicators I used didn't provide enough information to accurately predict monthly S&P 500 returns.
+
