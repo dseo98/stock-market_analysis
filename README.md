@@ -17,9 +17,9 @@ After calculating monthly S&P 500 returns, I noticed that the correlation result
 
 
 # Analysis using lagged economic indicators
-I also checked the relationship between the previous month's economic indicators and the current month's S&P 500 returns. I used shift(1) to create lagged variables for CPI, unemployment, interest rates and GDP.
+I also looked at whether the previous month's economic indicators were related to the current month's S&P 500 returns. I used shift(1) to create lagged variables for CPI, unemployment, interest rates and GDP.
 
-The correlations were all close to zero. GDP had the lowest correlation with 0.001, while unemployment had the highest with 0.151. I thought the results might be different when using the previous month's data, but there was not much change. 
+All the correlations were close to zero. GDP had the lowest correlation with 0.001, while unemployment had the highest with 0.151. I thought the results might be different when using the previous month's data, but there was not much change. 
 
 So far I haven't found a strong relationship between these economic indicators and monthly S&P 500 returns.
 
@@ -33,3 +33,27 @@ This shows that the Linear Regression model didn't perform better than the basel
 
 Overall, the economic indicators I used didn't provide enough information to accurately predict monthly S&P 500 returns.
 
+
+
+# Decision tree dept comparison
+
+I also tested different maximum tree depths (2,3, and 4). The model with a depth of 2 had the lowest MAE with 5.47, compared to 5.74 for depth 3 and 5.69 for depth 4.
+
+I found that making the tree more complex did not improve its performance. All three versions also had higher MAEs than the baseline model.
+
+# Main finding
+
+Overall, I found that the relationships between economic indicators and the S&P 500 depended on how stock performance was measured. Although GDP had a strong correlation with the S&P 500 index, it had almost no correlation with monthly returns. The prediction models also did not perform better than the simple baseline model.
+
+# Limitations
+
+One limitation is that I only used about 170 months of data, which may not be enough to capture different market conditions.
+
+I also only included four economic indicators: CPI, unemployment, interest rates, and GDP. Other factors, such as company performance and investor sentiment could also affect stock returns.
+
+Another limitation is that GDP is reported quarterly so I had to convert it into monthly data by repeating each quarterly value for three months. This may not fully represent monthly economic changes.
+
+
+# Future improvements
+
+In the future, I'd like to try adding more variables, such as company earnings and market volatility. I'd also like to use more historical data and see whether other models perform better.
